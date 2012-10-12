@@ -1,0 +1,197 @@
+.zGrowlPrototype {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.zGrowl, .zGrowlBig {
+  position: fixed;
+  top: 40px;
+  z-index: 10;
+  opacity: 0;
+}
+.zGrowl .message, .zGrowlBig .message {
+  width: 130px;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Helv47;
+}
+
+.zGrowl {
+  width: 200px;
+  height: 50px;
+  right: 15px;
+  /*background-color: #fff;*/
+  /*.bg {
+  	opacity: .7;
+  	border: 3px solid #fff;
+  }*/
+}
+.zGrowl .message {
+  padding: 23px 0 0 31px;
+  font-size: 15px;
+}
+
+.zGrowlBig {
+  height: 120px;
+  right: -13px;
+}
+.zGrowlBig .message {
+  padding: 25px 0 0 16px;
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: Helv47;
+  src: url("../fonts/Helv47.ttf");
+}
+
+/*.firstPosition {
+		-webkit-transform: perspective(400px) rotateY(90deg);
+	}*/
+@-webkit-keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    -webkit-transform-origin: right center;
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    -webkit-transform-origin: right center;
+  }
+}
+
+@-moz-keyframes flipOutY {
+  0% {
+    -moz-transform: perspective(400px) rotateY(90deg);
+    -moz-transform-origin: right center;
+  }
+
+  100% {
+    -moz-transform: perspective(400px) rotateY(0deg);
+    -moz-transform-origin: right center;
+  }
+}
+
+@-o-keyframes flipOutY {
+  0% {
+    -o-transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -o-transform: perspective(400px) rotateY(90deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOutY {
+  0% {
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: right center;
+  }
+
+  100% {
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: right center;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.flipOutY {
+  opacity: 0;
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation: flipOutY .5s, appear .3s;
+  -webkit-animation-delay: 0s, .36s;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: flipOutY .5s, appear .3s;
+  -moz-animation-delay: 0s, .36s;
+  -o-backface-visibility: visible !important;
+  -o-animation-name: flipOutY;
+  backface-visibility: visible !important;
+  animation-name: flipOutY .5s, appear .3s;
+  animation-delay: 0s, .36s;
+}
+
+.animated {
+  /*-webkit-animation-duration: .5s;
+     -moz-animation-duration: .5s;
+       -o-animation-duration: .5s;
+          animation-duration: .5s;*/
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.firefoxTestAnimation {
+  /*opacity: 1;*/
+  -webkit-backface-visibility: visible !important;
+  -webkit-animation: appear 1s;
+  -moz-backface-visibility: visible !important;
+  -moz-animation-name: appear;
+  backface-visibility: visible !important;
+  animation-name: appear 1s;
+}
